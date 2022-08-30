@@ -1,0 +1,134 @@
+{
+	"item": [
+		{
+			"id": "bae37c6b-f88b-43de-8647-4518e34cc612",
+			"name": "Sample endpoint: Returns details about a particular user",
+			"request": {
+				"name": "Sample endpoint: Returns details about a particular user",
+				"description": {},
+				"url": {
+					"path": [
+						"user"
+					],
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"disabled": false,
+							"key": "id",
+							"value": "97072446",
+							"description": "(Required) ID of the user"
+						}
+					],
+					"variable": []
+				},
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"method": "GET",
+				"auth": null
+			},
+			"response": [
+				{
+					"id": "baa5ed73-6fce-4ef8-9d27-9e5dc335defb",
+					"name": "Sample response: Details about a user by ID",
+					"originalRequest": {
+						"url": {
+							"path": [
+								"user"
+							],
+							"host": [
+								"{{baseUrl}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "97072446"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"header": [
+						{
+							"disabled": false,
+							"description": "A link to the next page of responses",
+							"key": "x-next",
+							"value": "anim ullamco non esse Lorem"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"body": "{\n  \"id\": -1421239,\n  \"name\": \"Lorem Duis irure\",\n  \"tag\": \"quis exercitation eiusmo\"\n}",
+					"cookie": [],
+					"_postman_previewlanguage": "json"
+				},
+				{
+					"id": "cae4877c-da66-480a-9382-9ca09fa64f29",
+					"name": "Unexpected error",
+					"originalRequest": {
+						"url": {
+							"path": [
+								"user"
+							],
+							"host": [
+								"{{baseUrl}}"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "97072446"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"body": {}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"body": "{\n  \"code\": 95355553,\n  \"message\": \"eu sit consequat\"\n}",
+					"cookie": [],
+					"_postman_previewlanguage": "json"
+				}
+			],
+			"event": [],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			}
+		}
+	],
+	"event": [],
+	"variable": [
+		{
+			"type": "string",
+			"value": "http://localhost:3000",
+			"key": "baseUrl"
+		}
+	],
+	"info": {
+		"_postman_id": "76d9e558-6024-43a2-a739-ff7b9333e3e3",
+		"name": "#Reference Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"description": {
+			"content": "",
+			"type": "text/plain"
+		}
+	}
+}
